@@ -5,9 +5,10 @@
 // - remove the item at the specified index
 
 function remove(arr, index) {
-  return; // complete this statement
+  var aux = Array.from(arr);
+  aux.splice(index, 1);
+  return aux;
 }
-
 /* 
   DO NOT EDIT BELOW THIS LINE
   --------------------------- */

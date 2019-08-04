@@ -1,3 +1,5 @@
-// Start by creating a variable `message`
+// Start by creating a variable `message'
+let message = 'hello world'
+let messageType = typeof message
 
-console.log(message);
+console.log(messageType);

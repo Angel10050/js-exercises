@@ -8,7 +8,22 @@
 */
 
 var arr = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15];
+function Multiplos(num) {
+  if (num % 3 === 0) {
+    console.log(num, "Fizz");
+  }
+  if (num % 5 === 0) {
+    console.log(num, "Buzz");
+  }
+  if (num % 3 === 0 || num % 5 === 0) {
+    console.log(num, "FizzBuzz");
+  } else {
+    console.log(num);
+  }
+}
 
+var losMultiplos = arr.forEach(Multiplos);
+console.log(losMultiplos);
 /* EXPECTED OUTPUT */
 
 /*

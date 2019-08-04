@@ -4,7 +4,9 @@
 // - is less than or equal to 100
 // Tip: write other small functions for each requirement
 
-function validate(num) {}
+function validate(num) {
+  return num > 0 && typeof num === "number" && num <= 100;
+}
 
 /* 
   DO NOT EDIT BELOW THIS LINE
@@ -25,3 +27,4 @@ console.log(validate("16"));
   false
   false
 */
+//-- trabajar con varias funciones

@@ -6,7 +6,7 @@ and for each object, `console.log()` out the sentence:
 
 Here is the array:
 
-*/ 
+*/
 
 var writers = [
   {
@@ -42,3 +42,8 @@ var writers = [
 /*
 If you want an extra challenge, only `console.log()` the writers that are alive.
 */
+function myFunc(writerse) {
+  console.log("Hi, my name is " + writerse.firstName + writerse.lastName + "I am " + writerse.age + " years old, and work as a " + writerse.occupation)
+}
+let foriching = writers.forEach(myFunc)
+

@@ -13,9 +13,19 @@
   EXPECTED RESULT: The #exercise1 element has textContent = "A Promising
   Promise"
 */
+let pElEtag = document.querySelector('#exercise1')
 function exercise1() {
   var promise1 = resolvedPromise()
+  promise1.then(function (value) {
+    pElEtag.innerHTML = value
+  })
 }
+
+
+// function resolvedPromise() {
+//   return Promise.resolve('A Promising Promise')   // ESTO ES LO MISMO QUE AL FINAL DE LA HOJA
+// }
+
 
 /*
   EXERCISE 2
@@ -26,8 +36,13 @@ function exercise1() {
   EXPECTED RESULT: The #exercise2 element has textContent = "A Unpromising
   Promise"
 */
+let pElEtag2 = document.querySelector('#exercise2')
 function exercise2() {
   var promise2 = rejectedPromise()
+  promise2.catch(function (sValue) {
+    pElEtag2.innerHTML = sValue
+  })
+
 }
 
 /*
@@ -39,10 +54,21 @@ function exercise2() {
 
   EXPECTED RESULT: The #exercise3 element has textContent = "A Longer Promise"
 */
+let exer3 = document.querySelector('#exercise3')
 function exercise3() {
   var promise3 = delayedPromise()
+  promise3.then(function (MyThrValue) {
+    exer3.innerHTML = MyThrValue
+  })
 }
 
+function delayedPromise() {
+  return new Promise((resolve) => {
+    setTimeout(() => {
+      resolve('A Longer Promise')
+    }, 2000)
+  })
+}
 /*
   EXERCISE 4
   =======
@@ -54,10 +80,18 @@ function exercise3() {
   EXPECTED RESULT: The #exercise4 element has textContent = "A Promise from:
   YOUR NAME"
 */
+let exer4 = document.querySelector('#exercise4')
 function exercise4() {
   var promise4 = concatPromise()
+  promise4.then(function (fourthVal) {
+    return fourthVal + 'Angel Velez'
+  }).then(function (finalResult) {
+    exer4.innerHTML = finalResult;
+  })
 }
-
+function concatPromise() {
+  return Promise.resolve('A Promise from: ')
+}
 /*
   EXERCISE 5 (Stretch Goal)
   =======
@@ -70,9 +104,14 @@ function exercise4() {
 
   EXPECTED RESULT: The #exercise5 element has textContent = "Hello Promises!"
 */
-
+let exerc5 = document.querySelector('#exercise5')
 function exercise5() {
-  // Write your implementation here
+  myPromise().then(function (fiveValue) {
+    exerc5.innerHTML = fiveValue;
+  })
+}
+function myPromise() {
+  return Promise.resolve('Hello Promises!')
 }
 
 /*
@@ -88,11 +127,15 @@ function exercise5() {
   EXPECTED RESULT: The #exercise6 element has textContent = "Something went
   wrong!"
 */
+let exerciseSix = document.querySelector('#exercise6')
 function exercise6() {
-  // Write your implementation here
+  myPromiseRej().catch(result =>
+    exerciseSix.innerHTML = result
+  )
 }
-
-
+function myPromiseRej() {
+  return Promise.reject('Something went wrong!')
+}
 // 
 // -------------------------------------
 // 

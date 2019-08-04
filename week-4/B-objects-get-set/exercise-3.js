@@ -3,7 +3,13 @@
 */
 
 // WRITE CODE BELOW THIS
-
+var kitten = {
+  gender: "male",
+  name: "Gilberto",
+  lastName: "Velez",
+  age: 19,
+  job: "Developer"
+};
 // WRITE CODE ABOVE THIS
 
 console.log(kitten.name);

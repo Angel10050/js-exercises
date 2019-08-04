@@ -43,3 +43,7 @@ Use the setInterval function to reload automatically the messages of your webcha
 The code responsible to show the messages in the page is in exercise-1.js, so you will need to write your code there :-)
 */
 
+function ready() {
+    return 'the program is ready'
+}
+console.log()

@@ -5,7 +5,15 @@
 
 var percentages = [1, 23, 92, 18];
 
-console.log(percentagesFormatted);
+function format(percentages) {
+  var aux = Array.from(percentages);
+  for (let i = 0; i < percentages.length; i++) {
+    aux[i] += "%";
+  }
+  return aux;
+}
+
+console.log(format(percentages));
 
 /* 
   EXPECTED RESULT

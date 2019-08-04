@@ -24,7 +24,7 @@ _Returns true if a value is in the array._
 var mentors = ["Daniel", "Irini", "Ashleigh", "Rob", "Etzali"];
 
 function isAMentor(name) {
-  return mentors.includes(name);
+  return mentors.includes();
 }
 
 consooe.log("Is Rukmuni a mentor?");

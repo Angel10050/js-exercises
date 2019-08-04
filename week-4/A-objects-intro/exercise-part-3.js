@@ -14,3 +14,7 @@ Make sure you use words like:
 - etc.
 
 */
+var myTeam = {
+    nombre: 'angel',
+    apellido: 'velez',
+}

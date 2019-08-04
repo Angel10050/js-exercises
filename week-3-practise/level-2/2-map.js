@@ -14,7 +14,9 @@ var attendances = [
   ["Nina", 10]
 ];
 
-var eligibleStudentNames; // TODO: Complete this line.
+var eligibleStudentNames = attendances
+  .filter(num => num.some(num => num >= 8))
+  .map(num => num[0]);
 
 console.log(eligibleStudentNames);
 

@@ -5,9 +5,23 @@
 
 // write your code here
 
-var names = ["Rakesh", "Antonio", "Alexandra", "Andronicus", "Annam", "Mikey", "Anastasia", "Karim", "Ahmed"];
+var names = [
+  "Rakesh",
+  "Antonio",
+  "Alexandra",
+  "Andronicus",
+  "Annam",
+  "Mikey",
+  "Anastasia",
+  "Karim",
+  "Ahmed"
+];
 
-var longNameThatStartsWithA = findLongNameThatStartsWithA(names);
+function busqueda(name) {
+  return name[0] === "A" && name.length > 7; // asi puedo selecionar la primera letra de un alemento de un array
+}
+
+var longNameThatStartsWithA = names.find(busqueda);
 
 console.log(longNameThatStartsWithA);
 

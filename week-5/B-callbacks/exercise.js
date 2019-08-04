@@ -14,12 +14,16 @@
   EXPECTED RESULT: The #exercise1 element has textContent = "YOUR NAME" when
   the button is clicked
 */
-document.querySelector('#button1').addEventListener('click', exercise1)
+let btnOne = document.querySelector('#button1')
+let pOne = document.querySelector('#exercise1')
+btnOne.addEventListener('click', exercise1)
 
 function exercise1() {
-  // Write your implementation here
+  pOne.innerHTML = 'Angel Velez'
 }
 
+
+// Es una funciona que llama otra funcion
 /*
   EXERCISE 2
   =======
@@ -34,10 +38,18 @@ function exercise1() {
   EXPECTED RESULT: The #exercise2 element has textContent = "Hello from the
   function caller"
 */
+
 functionThatCallsBack(exercise2)
 
+let pTwo = document.querySelector('#exercise2')
+
 function exercise2(result) {
-  // Write your implementation here
+  pTwo.innerHTML = result
+}
+
+
+function functionThatCallsBack(callback) {
+  callback('Hello from the function caller')
 }
 
 /*
@@ -46,21 +58,24 @@ function exercise2(result) {
 
   The exercise3 function will be called for you automatically. It is called
   with a callback function as the first parameter. Call this callback function
-  (hint: use `()`) with the parameter "Hello from the callback" and it will
-  insert it into the #exercise3 element
+ with the parameter "Hello from the callback" and it will
+  insert it into the #exercise3 element (hint: use `()`) 
 
   EXPECTED RESULT: The #exercise3 element has textContent = "Hello from the
   callback"
-
-  Can you explain why we get this result? Write down your explanation in a
+ Can you explain why we get this result? Write down your explanation in a
   comment below (Hint: look below to see where exercise3 is called)
 */
 
-function exercise3(callback) {
-  // Write your implementation here
 
-  // Write your explanation here
+
+function exercise3(callback) {
+  callback("Hello from the callback")
 }
+
+exercise3((text) => {
+  document.querySelector('#exercise3').innerText = text
+})
 
 // 
 // -------------------------------------
