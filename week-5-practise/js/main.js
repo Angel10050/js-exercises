@@ -41,8 +41,7 @@ function checkForm(e) {
   for (i = 0; i < 3; i++) {
     if (inputOfFurmulary[i].value.length == 0) {
       inputOfFurmulary[i].style.backgroundColor = `#FF8484`;
-    } else if (emailInput.value.includes('@') = false) {
-      inputOfFurmulary[i].style.backgroundColor = `#FF8484`
+
     } else {
       alert('thank You')
     }
