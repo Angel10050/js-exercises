@@ -32,7 +32,7 @@ function changeByGreen() {
 
 let myInputBtn = document.querySelector('form > .btn.btn-primary');
 let inputOfFurmulary = [ ...document.querySelectorAll('.form-control') ];
-// let emailInput = document.querySelector('#exampleInputEmail1');
+let emailInput = document.querySelector('#exampleInputEmail1');
 let form = document.querySelector('form');
 
 myInputBtn.addEventListener('click', checkForm);
